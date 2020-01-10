@@ -1,0 +1,27 @@
+window {
+    background-color: rgba(26, 26, 26, 0.95);
+}
+
+#input {
+    margin: 5px;
+    padding: 4px;
+    padding-left: 10px;
+    border-radius: 0px;
+    font: 16px "Roboto Mono";
+    border: solid 1px #1976D2;
+    background-color: transparent;
+}
+
+#inner-box {
+    margin: 5px;
+}
+
+#outer-box {
+    margin: 12px;
+    background-color: transparent;
+}
+
+#text {
+    padding: 8px;
+    font: 16px "Roboto Mono";
+}

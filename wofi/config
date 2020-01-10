@@ -1,0 +1,5 @@
+width=1000
+height=500
+mode=drun
+filter_rate=100
+style=style.css
