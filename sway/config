@@ -8,7 +8,7 @@ set $term gnome-terminal
 set $menu wofi --show drun
 
 # wallpaper
-output * bg /home/zigapk/Pictures/wallpaper.jpg fill
+output * bg /home/vidd/Pictures/wallpaper.jpg fill
 
 # displays
 output HDMI-A-2 pos 0 0 res 2560x1440
@@ -16,9 +16,9 @@ output eDP-1 pos 320 1440 res 1920x1080
 focus output HDMI-A-2
 
 # clamshell mode (closed lid)
-set $laptop eDP-1
-bindswitch --reload lid:on output $laptop disable
-bindswitch --reload lid:off output $laptop enableq
+#set $laptop eDP-1
+#bindswitch --reload lid:on output $laptop disable
+#bindswitch --reload lid:off output $laptop enable
 
 # shortcuts
     # terminal
@@ -40,10 +40,10 @@ bindswitch --reload lid:off output $laptop enableq
     bindsym $mod+Shift+c reload
 
     # screenshot to cliboard
-    bindsym $mod+s exec grim -g "$(slurp)" - | wl-copy
+    bindsym $mod+Shift+s exec grim -g "$(slurp)" - | wl-copy
     
     # screenshot to desktop
-    bindsym $mod+Shift+s exec grim -g "$(slurp)" "$(xdg-user-dir DESKTOP)/$(date +'%s_grim.png')"
+    bindsym $mod+s exec grim -g "$(slurp)" "$(xdg-user-dir DESKTOP)/$(date +'%s_grim.png')"
 
     # exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
@@ -107,7 +107,14 @@ client.urgent           $cl_urge $cl_urge $cl_fore $cl_urge $cl_urge
 
 
 # input devices
-input "1739:0:Synaptics_TM3276-022" {
+input "type:touchpad" {
+    click_method clickfinger
+    tap enabled
+    dwt enabled
+    natural_scroll enabled
+}
+
+input "type:pointer" {
     click_method clickfinger
     tap enabled
     dwt enabled
@@ -115,13 +122,14 @@ input "1739:0:Synaptics_TM3276-022" {
 }
 
 # media keys
-bindsym XF86MonBrightnessUp exec sudo light -A 5
-bindsym XF86MonBrightnessDown exec sudo light -U 5
-bindsym XF86AudioRaiseVolume exec pactl -- set-sink-volume 0 +5%
-bindsym XF86AudioLowerVolume exec pactl -- set-sink-volume 0 -5%
-bindsym XF86AudioMute exec amixer -D pulse set Master 1+ toggle
+bindsym XF86MonBrightnessUp exec light -A 5
+bindsym XF86MonBrightnessDown exec light -U 5
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 # notifications daemon
 exec mako
 
 include /etc/sway/config.d/*
+

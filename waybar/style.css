@@ -4,9 +4,9 @@
 }
 
 window#waybar {
-	/* background: #292b2e; */
-	background: transparent;
-	color: #fdf6e3;
+	background: rgba(0, 0, 0, 0.45); 
+	/*background: transparent;*/
+	/*color: #fdf6e3;*/
 }
 
 #custom-right-arrow-dark,
@@ -35,8 +35,8 @@ window#waybar {
 #temperature,
 #battery,
 #tray {
-	background: #1a1a1a;
-	opacity: 1;
+	/*background: #1a1a1a;*/
+	/*opacity: 1;*/
 }
 
 #workspaces button {
@@ -56,6 +56,7 @@ window#waybar {
 	padding: 0 3px;
 }
 
+/*
 #pulseaudio {
 	color: #268bd2;
 }
@@ -74,6 +75,7 @@ window#waybar {
 #battery {
 	color: #859900;
 }
+*/
 
 #clock,
 #pulseaudio,

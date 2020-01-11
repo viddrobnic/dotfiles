@@ -5,22 +5,26 @@
 	"position": "top",
 
 	"modules-left": [
-		"sway/workspaces",
-		"custom/right-arrow-dark"
+		"sway/workspaces"
+		//"custom/right-arrow-dark"
 	],
 	"modules-center": [
-		"custom/left-arrow-dark",
-		"clock#1",
-		"clock#2",
-		"clock#3",
-		"custom/right-arrow-dark"
+		//"custom/left-arrow-dark",
+		"clock"
+		//"clock#1",
+		//"clock#2",
+		//"clock#3"
+		//"custom/right-arrow-dark"
 	],
 	"modules-right": [
-		"custom/left-arrow-dark",
+		//"custom/left-arrow-dark",
 		"pulseaudio",
 		"memory",
 		"cpu",
+		"backlight",
 		"battery",
+		"battery#0",
+		"battery#1",
 		"network",
 		"tray"
 	],
@@ -47,6 +51,11 @@
 		"format": "{name}"
 	},
 
+	"clock": {
+		"format": "{:%a  %H:%M  %m.%d.%Y}",
+		"interval": 60,
+		"tooltip": false
+	},
 	"clock#1": {
 		"format": "{:%a}",
 		"tooltip": false
@@ -61,9 +70,9 @@
 	},
 
 	"pulseaudio": {
-		"format": "Volume {volume:2}%",
+		"format": "\uf028 {volume:2}%",
 		"format-bluetooth": "{icon}  {volume}%",
-		"format-muted": "MUTE",
+		"format-muted": "\uf026 0%",
 		"format-icons": {
 			"headphones": "",
 			"default": [
@@ -88,11 +97,16 @@
 	},
 	"memory": {
 		"interval": 5,
-		"format": "Mem {}%"
+		"format": "\uf110 {}%"
 	},
 	"cpu": {
 		"interval": 5,
-		"format": "CPU {usage:2}%"
+		"format": "\uf2db {usage:2}%"
+	},
+	"backlight": {
+		"format": "\uf0eb {percent}%",
+		"on-scroll-up": "light -A 5",
+		"on-scroll-down": "light -U 5"
 	},
 	"battery": {
 		"states": {
@@ -100,7 +114,39 @@
 			"warning": 30,
 			"critical": 15
 		},
-		"format": "Battery {capacity}%",
+		"format": "{icon} {capacity}%",
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			""
+		]
+	},
+	"battery#0": {
+		"bat": "BAT0",
+		"states": {
+			"good": 95,
+			"warning": 30,
+			"critical": 15
+		},
+		"format": "{icon}0 {capacity}%",
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			""
+		]
+	},
+	"battery#1": {
+		"bat": "BAT1",
+		"states": {
+			"good": 95,
+			"warning": 30,
+			"critical": 15
+		},
+		"format": "{icon}1 {capacity}%",
 		"format-icons": [
 			"",
 			"",
