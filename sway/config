@@ -2,7 +2,7 @@
 set $mod Mod4
 
 # terminal
-set $term gnome-terminal
+set $term termite
 
 # app launcher
 set $menu wofi --show drun
