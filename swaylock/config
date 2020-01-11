@@ -1,4 +1,4 @@
-image=/home/zigapk/Pictures/wallpaper.jpg
+image=~/Pictures/wallpaper.jpg
 font=RobotoMono
 indicator-radius=80
 indicator-thickness=16
@@ -21,3 +21,4 @@ ring-ver-color=00000000
 ring-wrong-color=00000000
 text-color=#ffffff
 text-caps-lock-color=#ffffff
+
