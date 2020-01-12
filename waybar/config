@@ -18,6 +18,7 @@
 	],
 	"modules-right": [
 		//"custom/left-arrow-dark",
+		"custom/keymap",
 		"pulseaudio",
 		"memory",
 		"cpu",
@@ -28,7 +29,12 @@
 		"network",
 		"tray"
 	],
-
+	"custom/keymap": {
+		"exec": "lang=`swaymsg -t get_inputs | jq '.[3].xkb_active_layout_name'`; slo='\"Slovenian\"'; if [ \"$lang\" = \"$slo\" ]; then echo si; else echo us; fi",
+		"format": "{} ",
+		"interval": 1,
+		"tooltip": false
+	},
 	"custom/left-arrow-dark": {
 		"format": "",
 		"tooltip": false
@@ -52,7 +58,7 @@
 	},
 
 	"clock": {
-		"format": "{:%a  %H:%M  %m.%d.%Y}",
+		"format": "{:%a  %H:%M  %m. %d. %Y}",
 		"interval": 60,
 		"tooltip": false
 	},
