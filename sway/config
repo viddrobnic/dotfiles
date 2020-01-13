@@ -106,7 +106,7 @@ client.unfocused        $cl_back $cl_back $cl_fore $cl_back $cl_back
 client.urgent           $cl_urge $cl_urge $cl_fore $cl_urge $cl_urge
 
 # window font
-font Roboto Mono Light 10
+font pango:Roboto Mono Light 10
 
 # input devices
 input "type:touchpad" {
@@ -131,8 +131,8 @@ bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 # keyboard layouts
- input * xkb_layout "us,si"
- input * xkb_options "grp:alt_space_toggle"
+input * xkb_layout "us,si"
+input * xkb_options "grp:alt_space_toggle"
 
 # notifications daemon
 exec mako
