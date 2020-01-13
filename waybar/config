@@ -94,7 +94,7 @@
 		"format": " {ifname}",
 		"format-wifi": " {essid} {signalStrength}% ",
 		"format-ethernet": " ethernet ",
-		"format-disconnected": "disconnected",
+		"format-disconnected": "disconnected ",
 		"tooltip-format": " {ifname} ",
 		"tooltip-format-wifi": " {essid} {signalStrength}% ",
 		"tooltip-format-ethernet": " {ifname} ",
