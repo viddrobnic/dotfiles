@@ -16,9 +16,9 @@ output eDP-1 pos 320 1440 res 1920x1080
 focus output HDMI-A-2
 
 # clamshell mode (closed lid)
-#set $laptop eDP-1
-#bindswitch --reload lid:on output $laptop disable
-#bindswitch --reload lid:off output $laptop enable
+set $laptop eDP-1
+bindswitch --reload lid:on output $laptop disable
+bindswitch --reload lid:off output $laptop enable
 
 # shortcuts
     # terminal

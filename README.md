@@ -10,4 +10,6 @@ sway swaylock wofi waybar ttf-roboto ttf-roboto-mono alsa gnome-terminal dmenu w
 
 Wallpaper should be present at `~/Pictures/wallpaper.jpg`.
 
+For most Java GUIs (JetBrains tools etc.) to work add `_JAVA_AWT_WM_NONREPARENTING=1` to `/etc/environment`.
+
 
