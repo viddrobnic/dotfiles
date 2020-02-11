@@ -34,7 +34,8 @@ bindswitch --reload lid:off output $laptop enable
     floating_modifier $mod normal
 
     # lock
-    bindsym $mod+l exec swaylock --ignore-empty-password
+    bindsym $mod+l exec swaylock -f --ignore-empty-password
+    exec swayidle -w before-sleep 'swaylock -f --ignore-empty-password'
 
     # reload the configuration file
     bindsym $mod+Shift+c reload
