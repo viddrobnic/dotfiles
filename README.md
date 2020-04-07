@@ -9,7 +9,7 @@ sway swayidle swaylock wofi waybar ttf-roboto ttf-roboto-mono alsa gnome-termina
 
 
 ### Config
-Config should be linked as:
+Config should be linked as (links are written as `path/on/your/machine` -> `path/in/this/repo`):
 - `~/.config/sway` -> `sway/`
 - `~/.config/swaylock` -> `swaylock/`
 - `~/.config/waybar` -> `waybar/`
