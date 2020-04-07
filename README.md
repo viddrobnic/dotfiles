@@ -45,7 +45,8 @@ Required packages:
 python-pygments fzf powerline-fonts
 ```
 
-There are also using some external plugins, that you need to install manually:
+There are also using some external plugins, that you need to install manually.
+The following commands should be executed in zsh shell with oh-my-zsh loaded, so that you have access to the `ZSH_CUSTOM` environment variable.
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
     ```shell
     git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
