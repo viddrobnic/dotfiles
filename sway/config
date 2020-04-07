@@ -11,6 +11,7 @@ set $menu wofi --show drun
 output * bg ~/Pictures/wallpaper.jpg fill
 
 # displays
+#output HDMI-A-2 pos 0 0 res 1920x1080
 output HDMI-A-2 pos 0 0 res 2560x1440
 output eDP-1 pos 320 1440 res 1920x1080
 focus output HDMI-A-2
@@ -33,6 +34,9 @@ bindswitch --reload lid:off output $laptop enable
     # drag resize
     floating_modifier $mod normal
 
+    # split horizontally
+    bindsym $mod+h splith
+
     # lock
     bindsym $mod+l exec swaylock -f --ignore-empty-password
     exec swayidle -w before-sleep 'swaylock -f --ignore-empty-password'
@@ -42,7 +46,7 @@ bindswitch --reload lid:off output $laptop enable
 
     # screenshot to cliboard
     bindsym $mod+Shift+s exec grim -g "$(slurp)" - | wl-copy
-    
+
     # screenshot to desktop
     bindsym $mod+s exec grim -g "$(slurp)" "$(xdg-user-dir DESKTOP)/$(date +'%s_grim.png')"
 

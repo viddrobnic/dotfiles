@@ -1,15 +1,59 @@
-# Sway dotfiles
-My custom sway configuration.
+# Dotfiles
+Our custom dotfiles.
 
-These are the contents of my `.config` folder.
-
-Required packages:
+## Sway 
+### Required packages:
 ```
-sway swayidle swaylock wofi waybar ttf-roboto ttf-roboto-mono alsa gnome-terminal dmenu wl-clipboard grim slurp mako light termite ttf-font-awesome
+sway swayidle swaylock wofi waybar ttf-roboto ttf-roboto-mono alsa gnome-terminal dmenu wl-clipboard grim slurp mako light ttf-font-awesome
 ```
 
+
+### Config
+Config should be linked as:
+- `~/.config/sway` -> `sway/`
+- `~/.config/swaylock` -> `swaylock/`
+- `~/.config/waybar` -> `waybar/`
+- `~/.config/wofi` -> `wofi/`
+
+
+### Wallpaper
 Wallpaper should be present at `~/Pictures/wallpaper.jpg`.
 
-For most Java GUIs (JetBrains tools etc.) to work add `_JAVA_AWT_WM_NONREPARENTING=1` to `/etc/environment`.
+### Fixing JAVA GUI
+For most Java GUIs (JetBrains tools etc.) to work, add `_JAVA_AWT_WM_NONREPARENTING=1` to `/etc/environment`.
 
+### Firefox
+For Firefox to use wayland, add
+`MOZ_ENABLE_WAYLAND=1` to `/etc/environment`.
 
+## Termite
+We are using `termite` as our terminal and it should be installed if using our sway config.
+
+### Config
+Our termite config should be linked as
+`~/.config/termite` -> `termite/`.
+
+### Theme
+Our config is using the one dark theme, sourced from [here](https://github.com/ynj0/onedark-termite).
+
+## ZSH
+We are using [Oh My ZSH](https://ohmyz.sh/) to manage plugins and themes for ZSH.
+
+### Dependencies
+Required packages:
+```
+python-pygments fzf powerline-fonts
+```
+
+There are also using some external plugins, that you need to install manually:
+- [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+    ```shell
+    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+    ```
+- [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+    ```shell
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+    ```
+
+### Installing config file
+Link `~/.zshrc` -> `zsh/.zshrc`. You have to edit `ZSH` variable to point to your oh-my-zsh installation.
