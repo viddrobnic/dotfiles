@@ -58,3 +58,11 @@ The following commands should be executed in zsh shell with oh-my-zsh loaded, so
 
 ### Installing config file
 Link `~/.zshrc` -> `zsh/.zshrc`. You have to edit `ZSH` variable to point to your oh-my-zsh installation.
+
+## Neovim
+We are using [vim-plug](https://github.com/junegunn/vim-plug) plugin manager.
+
+### Config
+Config should be linked as `~/.config/nvim/init.vim` -> `nvim/init.vim`.
+
+After linking the config, run `:PlugInstall` command in nvim to install the packages and reopen nvim.
