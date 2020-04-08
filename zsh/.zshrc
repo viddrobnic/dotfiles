@@ -125,7 +125,13 @@ TIMER_PRECISION=2
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh" 
+# alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Export TERM variable for ssh to work.
 export TERM=xterm
+
+# Make home and end keys take you to beginning and end of the line.
+bindkey '^[[H' beginning-of-line
+bindkey '^[[F' end-of-line
+
 
