@@ -2,7 +2,7 @@
 set $mod Mod4
 
 # terminal
-set $term termite
+set $term alacritty
 
 # app launcher
 set $menu wofi --show drun
@@ -38,8 +38,8 @@ bindswitch --reload lid:off output $laptop enable
     bindsym $mod+h splith
 
     # lock
-    bindsym $mod+l exec swaylock -f --ignore-empty-password
-    exec swayidle -w before-sleep 'swaylock -f --ignore-empty-password'
+    bindsym $mod+l exec swaylock-blur --blur-sigma=20 -- -f --ignore-empty-password
+    exec swayidle -w before-sleep 'swaylock-blur --blur-sigma=20 -- -f --ignore-empty-password'
 
     # reload the configuration file
     bindsym $mod+Shift+c reload

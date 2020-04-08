@@ -4,7 +4,7 @@ Our custom dotfiles.
 ## Sway 
 ### Required packages:
 ```
-sway swayidle swaylock wofi waybar ttf-roboto ttf-roboto-mono alsa gnome-terminal dmenu wl-clipboard grim slurp mako light ttf-font-awesome
+sway swayidle swaylock grim ffmpeg swaylock-blur wofi waybar ttf-roboto ttf-roboto-mono alsa gnome-terminal dmenu wl-clipboard grim slurp mako light ttf-font-awesome
 ```
 
 
