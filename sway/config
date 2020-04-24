@@ -5,7 +5,7 @@ set $mod Mod4
 set $term alacritty
 
 # app launcher
-set $menu wofi --show drun
+set $menu wofi show --drun --conf ~/.config/wofi/config --style ~/.config/wofi/style.css
 
 # wallpaper
 output * bg ~/Pictures/wallpaper.jpg fill
