@@ -4,6 +4,9 @@ set $mod Mod4
 # terminal
 set $term alacritty
 
+# file explorer
+set $file_explorer nautilus
+
 # app launcher
 set $menu wofi show --drun --conf ~/.config/wofi/config --style ~/.config/wofi/style.css
 
@@ -30,6 +33,9 @@ bindswitch --reload lid:off output $laptop enable
 
     # app launcher shortcut
     bindsym $mod+space exec $menu -i
+
+    # file explorer shortuct
+    bindsym $mod+e exec $file_explorer
 
     # drag resize
     floating_modifier $mod normal

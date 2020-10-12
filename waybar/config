@@ -87,7 +87,7 @@
 			]
 		},
 		"scroll-step": 5,
-		"on-click": "termite -e alsamixer",
+		"on-click": "alacritty -e alsamixer",
 		"on-click-right": "pavucontrol"
 	},
 	"network": {
