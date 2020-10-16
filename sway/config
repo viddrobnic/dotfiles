@@ -150,3 +150,4 @@ exec mako
 
 include /etc/sway/config.d/*
 
+for_window [class="^jetbrains-.+"][window_type=dialog] focus

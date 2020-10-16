@@ -58,7 +58,7 @@
 	},
 
 	"clock": {
-		"format": "{:%a  %H:%M  %m. %d. %Y}",
+		"format": "{:%a  %H:%M  %d. %m. %Y}",
 		"interval": 60,
 		"tooltip": false
 	},
@@ -99,7 +99,7 @@
 		"tooltip-format-wifi": " {essid} {signalStrength}% ",
 		"tooltip-format-ethernet": " {ifname} ",
 		"tooltip-format-disconnected": "Disconnected",
-		"on-click": "termite -e nmtui",
+		"on-click": "alacritty -e nmtui",
 		"max-length": 50
 	},
 	"memory": {
