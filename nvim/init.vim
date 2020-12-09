@@ -13,7 +13,7 @@ call plug#end()
 
 " onedark colorscehme
 syntax on
-let g:onedark_termcolors = 16
+" let g:onedark_termcolors = 16
 colorscheme onedark
 
 " lighltine colorscheme
