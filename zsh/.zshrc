@@ -118,13 +118,10 @@ TIMER_PRECISION=2
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias sml="rlwrap sml"
 
 # Export chrome for flutter
-export CHROME_EXECUTABLE=google-chrome-stable
 
 # Make home and end keys take you to beginning and end of the line.
 bindkey '^[[H' beginning-of-line
 bindkey '^[[F' end-of-line
-
 
