@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=/opt/flutter/bin:$HOME/Android/Sdk/platform-tools:$HOME/go/bin:$PATH
+export PATH=/opt/flutter/bin:$HOME/Library/Android/sdk/platform-tools:$HOME/go/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -69,22 +69,12 @@ DISABLE_UPDATE_PROMPT="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-    zsh-interactive-cd
-    urltools
     timer
-    jsontools
-    httpie
-    gitfast
     extract
-    encode64
-    copydir
-    copyfile
     colored-man-pages
     colorize
     zsh-autosuggestions
     zsh-syntax-highlighting
-    docker
-    docker-compose
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -119,9 +109,10 @@ TIMER_PRECISION=2
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Export chrome for flutter
-
 # Make home and end keys take you to beginning and end of the line.
 bindkey '^[[H' beginning-of-line
 bindkey '^[[F' end-of-line
+
+# Ruby export from homebrew
+export PATH="/opt/homebrew/opt/ruby/bin:/opt/homebrew/lib/ruby/gems/3.0.0/bin:$PATH"
 
