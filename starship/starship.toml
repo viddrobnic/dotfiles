@@ -1,6 +1,11 @@
 add_newline = false
 format = """
-🦄 $username[@](bold blue dimmed)$hostname $directory$git_branch$git_commit$git_state$git_status$python$character
+🦄 $username[@](bold blue dimmed)$hostname \
+$directory\
+$git_branch$git_commit$git_state$git_status\
+$python\
+$golang\
+$character
 """
 
 [character]
@@ -41,4 +46,8 @@ style = "bold red dimmed"
 
 [python]
 format = '[\(${symbol}(${version})( $virtualenv)\) ]($style)'
-style = "green bold"
+style = "cyan bold"
+
+[golang]
+format = "[\\($symbol($version)\\) ]($style)"
+style = "cyan bold"
