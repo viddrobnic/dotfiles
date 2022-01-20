@@ -1,0 +1,44 @@
+add_newline = false
+format = """
+🦄 $username[@](bold blue dimmed)$hostname $directory$git_branch$git_commit$git_state$git_status$python$character
+"""
+
+[character]
+success_symbol = "[➜](bold green)"
+error_symbol = "[✗](bold red)"
+
+[username]
+show_always = true
+style_user = "bold blue"
+format = "[$user]($style)"
+
+[hostname]
+ssh_only = false
+style = "bold purple"
+format = "[$hostname]($style)"
+
+[memory_usage]
+format = "$symbol[${ram}]($style)"
+symbol = ""
+disabled = false
+
+[directory]
+truncate_to_repo = true
+home_symbol = "~"
+style = "bold blue dimmed"
+
+[git_branch]
+format = "[$symbol$branch]($style) "
+style = "bold blue"
+
+[git_commit]
+format = "[\\($hash$tag\\)]($style) "
+style = "bold blue"
+
+[git_status]
+format = '([\($all_status$ahead_behind\)]($style) )'
+style = "bold red dimmed"
+
+[python]
+format = '[\(${symbol}(${version})( $virtualenv)\) ]($style)'
+style = "green bold"
