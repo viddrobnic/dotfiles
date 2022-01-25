@@ -116,11 +116,33 @@ TIMER_PRECISION=2
 # Ruby export from homebrew
 export PATH="/opt/homebrew/opt/ruby/bin:/opt/homebrew/lib/ruby/gems/3.0.0/bin:$PATH"
 
-# NVM Setup
-export NVM_DIR="$HOME/.nvm"
-  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
- 
+# NVM Setup with lay loading
+load_nvm () {
+    unset -f nvm node npm yarn
+    export NVM_DIR="$HOME/.nvm"
+    [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+    [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+}
+
+nvm () {
+    load_nvm
+    nvm $@
+}
+
+node () {
+    load_nvm
+    node $@
+}
+
+npm () {
+    load_nvm
+    npm $@
+}
+
+yarn () {
+    load_nvm
+    yarn $@
+}
 
 # Init starship
 eval "$(starship init zsh)"
