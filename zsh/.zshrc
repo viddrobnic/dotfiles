@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=/opt/flutter/bin:$HOME/Library/Android/sdk/platform-tools:$HOME/go/bin:$PATH
+export PATH=/opt/flutter/bin:$HOME/Library/Android/sdk/platform-tools:$HOME/go/bin:$HOME/.yarn/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -114,7 +114,7 @@ TIMER_PRECISION=2
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Ruby export from homebrew
-export PATH="/opt/homebrew/opt/ruby/bin:/opt/homebrew/lib/ruby/gems/3.0.0/bin:$PATH"
+export PATH="/opt/homebrew/opt/ruby/bin:/opt/homebrew/lib/ruby/gems/3.1.0/bin:$PATH"
 
 # NVM Setup with lay loading
 load_nvm () {

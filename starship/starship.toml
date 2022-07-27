@@ -1,10 +1,11 @@
 add_newline = false
 format = """
-🦄 $username[@](bold blue dimmed)$hostname \
+🐨 $username[@](bold blue dimmed)$hostname \
 $directory\
 $git_branch$git_commit$git_state$git_status\
 $python\
 $golang\
+$rust\
 $character
 """
 
@@ -41,8 +42,12 @@ format = "[\\($hash$tag\\)]($style) "
 style = "bold blue"
 
 [git_status]
-format = '([\($all_status$ahead_behind\)]($style) )'
-style = "bold red dimmed"
+format = "[$all_status$ahead_behind]($style) "
+style = "bold yellow"
+conflicted = "🏳"
+untracked = "🤷"
+stashed = "📦"
+modified = "📝"
 
 [python]
 format = '[\(${symbol}(${version})( $virtualenv)\) ]($style)'
@@ -51,3 +56,8 @@ style = "cyan bold"
 [golang]
 format = "[\\($symbol($version)\\) ]($style)"
 style = "cyan bold"
+
+[rust]
+format = "[\\($symbol($version)\\) ]($style)"
+style = "cyan bold"
+
