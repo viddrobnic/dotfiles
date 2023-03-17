@@ -9,6 +9,8 @@ $rust\
 $character
 """
 
+right_format="""$cmd_duration"""
+
 [character]
 success_symbol = "[➜](bold green)"
 error_symbol = "[✗](bold red)"
@@ -61,3 +63,6 @@ style = "cyan bold"
 format = "[\\($symbol($version)\\) ]($style)"
 style = "cyan bold"
 
+[cmd_duration]
+min_time = 0
+format = "[\\[$duration\\]]($style)"

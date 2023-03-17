@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=/opt/flutter/bin:$HOME/Library/Android/sdk/platform-tools:$HOME/go/bin:$HOME/.yarn/bin:$PATH
+export PATH=/opt/homebrew/bin:$HOME/.cargo/bin:/opt/flutter/bin:$HOME/Library/Android/sdk/platform-tools:$HOME/go/bin:$HOME/.yarn/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -71,7 +71,6 @@ HYPHEN_INSENSITIVE="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-    timer
     extract
     colored-man-pages
     colorize
@@ -84,10 +83,6 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
-# Settings for timer plugin
-TIMER_FORMAT='[%d]'
-TIMER_PRECISION=2
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -113,36 +108,6 @@ TIMER_PRECISION=2
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Ruby export from homebrew
-export PATH="/opt/homebrew/opt/ruby/bin:/opt/homebrew/lib/ruby/gems/3.1.0/bin:$PATH"
-
-# NVM Setup with lay loading
-load_nvm () {
-    unset -f nvm node npm yarn
-    export NVM_DIR="$HOME/.nvm"
-    [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-    [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-}
-
-nvm () {
-    load_nvm
-    nvm $@
-}
-
-node () {
-    load_nvm
-    node $@
-}
-
-npm () {
-    load_nvm
-    npm $@
-}
-
-yarn () {
-    load_nvm
-    yarn $@
-}
-
 # Init starship
 eval "$(starship init zsh)"
+
