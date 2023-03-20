@@ -4,16 +4,12 @@ Plug 'joshdick/onedark.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'airblade/vim-gitgutter'
-Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'nathanaelkane/vim-indent-guides'
-Plug 'udalov/kotlin-vim'
 
 call plug#end()
 
-" onedark colorscehme
+" colorscehme
 syntax on
-" let g:onedark_termcolors = 16
 colorscheme onedark
 
 " lighltine colorscheme
