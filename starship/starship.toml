@@ -45,7 +45,7 @@ style = 'bold blue'
 
 [git_status]
 format = '[($all_status$ahead_behind)]($style)'
-style = 'bold blue'
+style = 'blue bold'
 ahead = '⇡\($count\) '
 diverged = '⇕⇡\($ahead_count\)⇣\($behind_count\) '
 behind = '⇣\($count\) '
@@ -55,7 +55,7 @@ stashed = '📦 '
 modified = '📝 '
 renamed = '📑 '
 deleted = '🗑️ '
-staged = '[🏗️ \($count\) ](green)'
+staged = '🏗️ \($count\) '
 
 [python]
 format = '[\($symbol$version( $virtualenv)\) ]($style)'
