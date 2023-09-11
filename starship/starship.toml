@@ -70,9 +70,9 @@ format = '[\($symbol$version\) ]($style)'
 style = 'cyan bold'
 
 [nodejs]
-format = '[\($symbol$version\) ]($style)'
+format = '[\($symbol $version\) ]($style)'
 style = 'cyan bold'
-symbol = '🫏'
+symbol = '🫏 '
 
 [cmd_duration]
 min_time = 0

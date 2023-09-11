@@ -1,0 +1,21 @@
+export PATH=/opt/homebrew/bin:$HOME/.cargo/bin:/opt/flutter/bin:$HOME/Library/Android/sdk/platform-tools:$HOME/go/bin:$HOME/.yarn/bin:$PATH
+
+source ~/.zsh/completion.zsh
+
+# Basic extensions
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# Init starship
+eval "$(starship init zsh)"
+
+# Opam configuration
+[[ ! -r ~/.opam/opam-init/init.zsh ]] || source ~/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+
+# Configure editors
+export EDITOR="nvim"
+export VISUAL="nvim"
+
+# Common aliases
+alias ls="ls -G"
+alias vim="nvim"
