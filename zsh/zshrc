@@ -22,3 +22,5 @@ export VISUAL="nvim"
 # Common aliases
 alias ls="ls -G"
 alias vim="nvim"
+
+eval "$(zellij setup --generate-auto-start zsh)"

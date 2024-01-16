@@ -1,40 +1,40 @@
 # Dotfiles
-My custom dotfiles derived from the dotfiles we use at [zerodays](https://zerodays.dev). The original 
-repo can be found [here](https://github.com/zerodays/dotfiles)
 
-## ZSH
-We are using [Oh My ZSH](https://ohmyz.sh/) to manage plugins and themes for ZSH.
+My custom dotfiles setup. I use the following tools:
 
-### Dependencies
-Required packages:
-```
-python-pygments fzf powerline-fonts
-```
+- `kitty` terminal emulator
+- `zsh`
+- `starhip` terminal prompt
+- `zellij` terminal workspace
+- `neovim` editor. Neovim config is located in a [separate repository](https://github.com/viddrobnic/init.lua).
 
-There are also using some external plugins, that you need to install manually.
-The following commands should be executed in zsh shell with oh-my-zsh loaded, so that you have access to the `ZSH_CUSTOM` environment variable.
-- [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
-    ```shell
-    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-    ```
-- [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
-    ```shell
-    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-    ```
+## Getting started
 
-### Installing config file
-Link `~/.zshrc` -> `zsh/.zshrc`.
+1. Clone this repository to a location of your liking. Personally I use `~/.dotfiles`.
+2. Install zsh dependencies with:
+   ```sh
+   mkdir -p ~/.zsh
+   git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
+   ```
+3. Link the files to correct places. If you cloned the repository to `~/.dotfiles` you can use the following
+   script, otherwise execute the linking manually.
 
-## Starship
-Starship terminal prompt is used instead of the default.
+   ```sh
+   ln -s ~/.dotfiles/kitty ~/.config/kitty
 
-### Config
-Config should be linked as `~/.config/starship.toml -> starship/starship.toml`.
+   mkdir -p ~/.zsh
+   ln -s ~/.dotfiles/zsh/zshrc ~/.zshrc
+   ln -s ~/.dotfiles/zsh/completion.zsh ~/.zsh/completion.zsh
 
-## Neovim
-We are using [vim-plug](https://github.com/junegunn/vim-plug) plugin manager.
+   ln -s ~/.dotfiles/starship/starship.toml ~/.config/starship.toml
 
-### Config
-Config should be linked as `~/.config/nvim/init.vim` -> `nvim/init.vim`.
+   mkdir -p ~/.config/zellij
+   ln -s ~/.dotfiles/zellij/config.kdl ~/.config/zellij/config.kdl
+   ```
 
-After linking the config, run `:PlugInstall` command in nvim to install the packages and reopen nvim.
+## Known Issues
+
+- Some TUIs (like `kitten themes`) might misbehave. Try running them in zellij's locked mode (<kbd>Ctrl</kbd> + <kbd>g</kbd>).
+  If it still doesn't work, run the command outside of zellij.
+- If you have neovim open and resize the terminal window, stuff might get rendered weird. For now the fix is to restart neovim...

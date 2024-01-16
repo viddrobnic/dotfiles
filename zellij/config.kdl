@@ -1,0 +1,11 @@
+on_force_close "quit"
+session_serialization false
+
+ui {
+    pane_frames {
+        rounded_corners true
+    }
+}
+
+theme "catppuccin-macchiato"
+
