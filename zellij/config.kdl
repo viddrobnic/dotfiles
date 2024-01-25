@@ -1,6 +1,13 @@
 on_force_close "quit"
 session_serialization false
 
+keybinds {
+    unbind "Ctrl o"
+    normal {
+        bind "Ctrl e" { SwitchToMode "session"; }
+    }
+}
+
 ui {
     pane_frames {
         rounded_corners true

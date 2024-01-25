@@ -23,4 +23,6 @@ export VISUAL="nvim"
 alias ls="ls -G"
 alias vim="nvim"
 
+# Setup zellij and autin
 eval "$(zellij setup --generate-auto-start zsh)"
+eval "$(atuin init zsh)"
