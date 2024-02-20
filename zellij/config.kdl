@@ -3,7 +3,10 @@ session_serialization false
 
 keybinds {
     unbind "Ctrl o"
+    unbind "Ctrl b"
+
     normal {
+        unbind "Ctrl b"
         bind "Ctrl e" { SwitchToMode "session"; }
     }
 }
