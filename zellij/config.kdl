@@ -4,10 +4,19 @@ session_serialization false
 keybinds {
     unbind "Ctrl o"
     unbind "Ctrl b"
+    unbind "Ctrl h"
 
     normal {
         unbind "Ctrl b"
         bind "Ctrl e" { SwitchToMode "session"; }
+
+        unbind "Ctrl h"
+        bind "Ctrl a" { SwitchToMode "move"; }
+    }
+
+    move {
+        unbind "Ctrl h"
+        bind "Ctrl a" { SwitchToMode "normal"; }
     }
 }
 
