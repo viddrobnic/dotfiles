@@ -7,6 +7,7 @@ My custom dotfiles setup. I use the following tools:
 - `starhip` terminal prompt
 - `zellij` terminal workspace
 - `atuin` magical shell history
+- `zed` editor
 - `neovim` editor. Neovim config is located in a [separate repository](https://github.com/viddrobnic/init.lua).
 
 ## Getting started
@@ -35,6 +36,10 @@ My custom dotfiles setup. I use the following tools:
 
    mkdir -p ~/.config/atuin
    ln -sf ~/.dotfiles/atuin/config.toml ~/.config/atuin/config.toml
+
+   mkdir -p ~/.config/zed
+   ln -s ~/.dotfiles/zed/settings.json ~/.config/zed/settings.json
+   ln -s ~/.dotfiles/zed/keymap.json ~/.config/zed/keymap.json
    ```
 
 ## Known Issues

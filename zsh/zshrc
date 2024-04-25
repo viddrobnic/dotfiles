@@ -1,4 +1,4 @@
-export PATH=/opt/homebrew/bin:$HOME/.cargo/bin:/opt/flutter/bin:$HOME/Library/Android/sdk/platform-tools:$HOME/go/bin:$HOME/.yarn/bin:$PATH
+export PATH=/opt/homebrew/bin:$HOME/.cargo/bin:/opt/flutter/bin:$HOME/Library/Android/sdk/platform-tools:$HOME/go/bin:$HOME/.yarn/bin:/opt/ziglang:/opt/zls:$PATH
 
 source ~/.zsh/completion.zsh
 
@@ -67,7 +67,7 @@ eval "$(starship init zsh)"
 [[ ! -r ~/.opam/opam-init/init.zsh ]] || source ~/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 
 # zellij
-eval "$(zellij setup --generate-auto-start zsh)"
+# eval "$(zellij setup --generate-auto-start zsh)"
 
 # atuin
 eval "$(atuin init zsh)"
