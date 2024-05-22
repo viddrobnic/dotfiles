@@ -1,0 +1,16 @@
+import = ["/Users/vidd/.config/alacritty/catppuccin/catppuccin-macchiato.toml"]
+
+[window]
+opacity = 0.95
+option_as_alt = "Both"
+
+[window.dimensions]
+columns = 140
+lines = 36
+
+[cursor]
+style = "underline"
+
+[font]
+size = 13.0
+normal.family = "JetBrainsMono Nerd Font"

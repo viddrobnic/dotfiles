@@ -8,9 +8,10 @@
 // from the command palette or from `Zed` application menu.
 {
   "features": {
-    "copilot": false
+    "inline_completion_provider": "none"
   },
   "vim_mode": true,
+  "relative_line_numbers": true,
   "ui_font_size": 16,
   "buffer_font_size": 15,
   "inlay_hints": {
@@ -58,6 +59,15 @@
       "initialization_options": {
         "check": {
           "command": "clippy"
+        }
+      }
+    },
+    "ocamllsp": {
+      "initialization_options": {
+        "config": {
+          "inlayHints": {
+            "enable": true
+          }
         }
       }
     }
