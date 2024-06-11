@@ -1,20 +1,20 @@
 format = """
-[┌──](bold purple)$username[@](bold blue dimmed)$hostname \
+[┌──](bold green)$username[@](bold yellow dimmed)$hostname \
 $directory\
 $git_branch$git_commit$git_state$git_status\
 $python\
 $golang\
 $rust\
 $nodejs
-[└─](bold purple)$character
+[└─](bold green)$character
 """
 
-right_format="""$cmd_duration"""
+right_format = """$cmd_duration"""
 
 add_newline = true
 
 [character]
-success_symbol = '[❯](bold purple)'
+success_symbol = '[❯](bold green)'
 error_symbol = '[❯](bold red)'
 
 [username]
@@ -24,13 +24,14 @@ format = '[$user]($style)'
 
 [hostname]
 ssh_only = false
-style = 'bold purple'
+style = 'bold yellow'
 format = '[$hostname]($style)'
 
 [directory]
 truncate_to_repo = true
 home_symbol = '~'
-style = 'bold blue dimmed'
+# style = 'bold blue dimmed'
+style = 'bold white'
 
 [git_branch]
 format = '[$symbol$branch(:$remote_branch)]($style) '
@@ -59,22 +60,22 @@ staged = '🏗️ \($count\) '
 
 [python]
 format = '[\($symbol$version( $virtualenv)\) ]($style)'
-style = 'cyan bold'
+style = 'yellow bold'
 
 [golang]
 format = '[\($symbol$version\) ]($style)'
-style = 'cyan bold'
+style = 'yellow bold'
 
 [rust]
 format = '[\($symbol$version\) ]($style)'
-style = 'cyan bold'
+style = 'yellow bold'
 
 [nodejs]
 format = '[\($symbol $version\) ]($style)'
-style = 'cyan bold'
-symbol = '🫏 '
+style = 'yellow bold'
+symbol = ''
 
 [cmd_duration]
 min_time = 0
 format = '[\[$duration\]]($style)'
-style = 'bold blue'
+style = 'bold green'

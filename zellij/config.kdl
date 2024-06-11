@@ -26,5 +26,4 @@ ui {
     }
 }
 
-theme "catppuccin-macchiato"
-
+theme "gruvbox-dark"

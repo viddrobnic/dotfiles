@@ -52,13 +52,20 @@ export VISUAL="nvim"
 ###########
 # ALIASES #
 ###########
-alias ls="ls -G"
+alias ls='eza -lh --group-directories-first --icons'
+alias lsa='ls -a'
+alias lt='ls --tree --level=2 --git'
+alias lta='lt -a'
+alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
+
 alias vim="nvim"
-alias ssh="TERM=xterm-256color ssh"
 
 ###############
 # SETUP TOOLS #
 ###############
+
+# Theme for batcat
+export BAT_THEME="gruvbox-dark"
 
 # Init starship
 eval "$(starship init zsh)"

@@ -1,7 +1,8 @@
-import = ["/Users/vidd/.config/alacritty/catppuccin/catppuccin-macchiato.toml"]
+import = [
+    "~/.config/alacritty/themes/themes/gruvbox_dark.toml"
+]
 
 [window]
-opacity = 0.95
 option_as_alt = "Both"
 
 [window.dimensions]
