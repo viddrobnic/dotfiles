@@ -65,7 +65,7 @@ alias vim="nvim"
 ###############
 
 # Theme for batcat
-export BAT_THEME="gruvbox-dark"
+export BAT_THEME="catppuccin-frappe"
 
 # Init starship
 eval "$(starship init zsh)"
@@ -85,3 +85,6 @@ eval "$(atuin init zsh)"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# postgres
+export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"

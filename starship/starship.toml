@@ -1,5 +1,5 @@
 format = """
-[┌──](bold green)$username[@](bold yellow dimmed)$hostname \
+[┌──](bold green)$username[@](bold blue dimmed)$hostname \
 $directory\
 $git_branch$git_commit$git_state$git_status\
 $python\
@@ -24,13 +24,12 @@ format = '[$user]($style)'
 
 [hostname]
 ssh_only = false
-style = 'bold yellow'
+style = 'bold purple'
 format = '[$hostname]($style)'
 
 [directory]
 truncate_to_repo = true
 home_symbol = '~'
-# style = 'bold blue dimmed'
 style = 'bold white'
 
 [git_branch]
@@ -60,22 +59,22 @@ staged = '🏗️ \($count\) '
 
 [python]
 format = '[\($symbol$version( $virtualenv)\) ]($style)'
-style = 'yellow bold'
+style = 'cyan bold'
 
 [golang]
 format = '[\($symbol$version\) ]($style)'
-style = 'yellow bold'
+style = 'cyan bold'
 
 [rust]
 format = '[\($symbol$version\) ]($style)'
-style = 'yellow bold'
+style = 'cyan bold'
 
 [nodejs]
 format = '[\($symbol $version\) ]($style)'
-style = 'yellow bold'
+style = 'cyan bold'
 symbol = ''
 
 [cmd_duration]
 min_time = 0
 format = '[\[$duration\]]($style)'
-style = 'bold green'
+style = 'bold blue'
