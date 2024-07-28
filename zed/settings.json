@@ -7,6 +7,8 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "theme": "Catppuccin Frappé (blue) - No Italics",
+  "buffer_font_family": "JetBrainsMono Nerd Font",
   "features": {
     "inline_completion_provider": "none"
   },
@@ -21,6 +23,18 @@
     "inline_blame": {
       "enabled": false
     }
+  },
+  "hover_popover_enabled": true,
+  "restore_on_startup": "none",
+  "auto_signature_help": true,
+  "tabs": {
+    "file_icons": true
+  },
+  "vim": {
+    "use_system_clipboard": "never"
+  },
+  "assistant": {
+    "button": false
   },
   "language_overrides": {
     "HTML": {
@@ -59,15 +73,6 @@
       "initialization_options": {
         "check": {
           "command": "clippy"
-        }
-      }
-    },
-    "ocamllsp": {
-      "initialization_options": {
-        "config": {
-          "inlayHints": {
-            "enable": true
-          }
         }
       }
     }

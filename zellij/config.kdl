@@ -12,6 +12,8 @@ keybinds {
 
         unbind "Ctrl h"
         bind "Ctrl a" { SwitchToMode "move"; }
+
+        bind "Alt f" { ToggleFloatingPanes; }
     }
 
     move {
