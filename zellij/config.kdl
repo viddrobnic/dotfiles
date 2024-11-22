@@ -25,7 +25,10 @@ keybinds {
 ui {
     pane_frames {
         rounded_corners true
+        hide_session_name true
     }
 }
 
 theme "catppuccin-frappe"
+
+default_layout "layout"
