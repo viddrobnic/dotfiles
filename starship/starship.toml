@@ -9,7 +9,7 @@ $nodejs
 [└─](bold green)$character
 """
 
-right_format = """$cmd_duration"""
+right_format = """$cmd_duration${custom.tuido}"""
 
 add_newline = true
 
@@ -78,3 +78,9 @@ symbol = ''
 min_time = 0
 format = '[\[$duration\]]($style)'
 style = 'bold blue'
+
+[custom.tuido]
+command = 'tuido ls --count'
+when = '[ $(tuido ls --count) != "0" ]'
+style = 'red bold'
+format = ' [\[!$output\]]($style)'
