@@ -1,0 +1,14 @@
+[user]
+	name = Vid Drobnič
+	signingkey = /Users/vidd/.ssh/id_ed25519.pub
+[commit]
+	gpgsign = true
+[gpg]
+	format = ssh
+[core]
+	editor = nvim
+	excludesFile = ~/.gitignore
+[push]
+	autoSetupRemote = true
+[pull]
+	ff = only
