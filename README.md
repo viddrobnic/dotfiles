@@ -33,8 +33,7 @@ My custom dotfiles setup. I use the following tools:
 
    ln -s ~/.dotfiles/starship/starship.toml ~/.config/starship.toml
 
-   mkdir -p ~/.config/zellij
-   ln -s ~/.dotfiles/zellij/config.kdl ~/.config/zellij/config.kdl
+   ln -s ~/.dotfiles/zellij ~/.config/zellij
 
    mkdir -p ~/.config/atuin
    ln -sf ~/.dotfiles/atuin/config.toml ~/.config/atuin/config.toml
