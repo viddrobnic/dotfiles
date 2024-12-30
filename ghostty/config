@@ -1,0 +1,6 @@
+theme = catppuccin-frappe
+font-family = JetBrainsMono Nerd Font
+cursor-style = underline
+macos-option-as-alt = true
+window-width = 140
+window-height = 36

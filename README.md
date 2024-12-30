@@ -2,7 +2,7 @@
 
 My custom dotfiles setup. I use the following tools:
 
-- `alacritty` terminal emulator
+- `ghostty` terminal emulator
 - `zsh`
 - `starhip` terminal prompt
 - `zellij` terminal workspace
@@ -23,9 +23,8 @@ My custom dotfiles setup. I use the following tools:
    script, otherwise execute the linking manually.
 
    ```sh
-   mkdir -p ~/.config/alacritty
-   git clone https://github.com/catppuccin/alacritty.git ~/.config/alacritty/catppuccin
-   ln -s ~/.dotfiles/alacritty/alacritty.toml ~/.config/alacritty/alacritty.toml
+   mkdir -p ~/.config/ghostty
+   ln -s ~/.dotfiles/ghostty/config ~/.config/ghostty/config
 
    mkdir -p ~/.zsh
    ln -s ~/.dotfiles/zsh/zshrc ~/.zshrc
