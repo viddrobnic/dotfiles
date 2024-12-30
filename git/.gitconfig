@@ -1,6 +1,7 @@
 [user]
 	name = Vid Drobnič
 	signingkey = /Users/vidd/.ssh/id_ed25519.pub
+	email = me@viddrobnic.com
 [commit]
 	gpgsign = true
 [gpg]
