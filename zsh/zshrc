@@ -1,4 +1,4 @@
-export PATH=/opt/homebrew/bin:$HOME/.cargo/bin:$HOME/go/bin:$PATH
+export PATH=/opt/homebrew/bin:$HOME/.cargo/bin:$HOME/go/bin:$HOME/.zig:$PATH
 
 source ~/.zsh/completion.zsh
 
@@ -80,15 +80,3 @@ eval "$(zellij setup --generate-auto-start zsh)"
 # atuin
 eval "$(atuin init zsh)"
 
-# bun completions
-[ -s "/Users/vidd/.bun/_bun" ] && source "/Users/vidd/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
-# Print overdue tasks
-if [ $(tuido ls --count) != "0" ]; then
-    echo "Tasks past due:"
-    tuido ls
-fi
