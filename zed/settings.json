@@ -4,18 +4,27 @@
 // documentation: https://zed.dev/docs/configuring-zed
 //
 // To see all of Zed's default settings without changing your
-// custom settings, run the `open default settings` command
-// from the command palette or from `Zed` application menu.
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "theme": "Catppuccin Frappé (blue) - No Italics",
-  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "assistant": {
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-3-5-sonnet-latest"
+    },
+    "version": "2"
+  },
   "features": {
-    "inline_completion_provider": "none"
+    "edit_prediction_provider": "zed"
+  },
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "telemetry": {
+    "metrics": false
   },
   "vim_mode": true,
-  "relative_line_numbers": true,
   "ui_font_size": 16,
   "buffer_font_size": 15,
+  "relative_line_numbers": true,
   "inlay_hints": {
     "enabled": true
   },
@@ -24,29 +33,16 @@
       "enabled": false
     }
   },
-  "hover_popover_enabled": true,
   "restore_on_startup": "none",
-  "auto_signature_help": false,
+  "preferred_line_length": 120,
   "show_wrap_guides": true,
   "wrap_guides": [120],
   "tabs": {
-    "file_icons": true
+    "file_icons": true,
+    "git_status": true
   },
   "vim": {
     "use_system_clipboard": "never"
-  },
-  "assistant": {
-    "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-3-5-sonnet-20240620"
-    },
-    "version": "2",
-    "button": true
-  },
-  "language_overrides": {
-    "HTML": {
-      "format_on_save": "off"
-    }
   },
   "lsp": {
     "vtsls": {
