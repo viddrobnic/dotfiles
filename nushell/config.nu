@@ -1,0 +1,48 @@
+# config.nu
+#
+# Installed by:
+# version = "0.102.0"
+
+# disable banner
+$env.config.show_banner = false
+
+$env.path ++= ["/opt/homebrew/bin", $"($env.home)/.cargo/bin", $"($env.home)/go/bin", $"($env.home)/.zig"]
+
+# Setup editor mode
+$env.config.edit_mode = "vi"
+$env.config.buffer_editor = "nvim"
+
+# Common aliases
+alias vim = nvim
+alias lg = lazygit
+
+# Set theme
+source $"($nu.data-dir)/themes/catppuccin_frappe.nu"
+
+# jj autocomplete
+jj util completion nushell | save -f $"($nu.data-dir)/completions-jj.nu" 
+source $"($nu.data-dir)/completions-jj.nu"
+
+# Setup starship
+$env.PROMPT_INDICATOR_VI_INSERT = ""
+$env.PROMPT_INDICATOR_VI_NORMAL = ": "
+
+mkdir ($nu.data-dir | path join "vendor/autoload")
+starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
+
+# Setup starship
+def start_zellij [] {
+    if 'ZELLIJ' not-in ($env | columns) {
+      if 'ZELLIJ_AUTO_ATTACH' in ($env | columns) and $env.ZELLIJ_AUTO_ATTACH == 'true' {
+        zellij attach -c
+      } else {
+        zellij
+      }
+
+      if 'ZELLIJ_AUTO_EXIT' in ($env | columns) and $env.ZELLIJ_AUTO_EXIT == 'true' {
+        exit
+      }
+    }
+}
+
+start_zellij

@@ -1,5 +1,6 @@
 on_force_close "quit"
 session_serialization false
+default_shell "nu"
 
 keybinds {
     unbind "Ctrl o"

@@ -2,5 +2,8 @@ theme = catppuccin-frappe
 font-family = JetBrainsMono Nerd Font
 cursor-style = underline
 macos-option-as-alt = true
+macos-icon = xray
 window-width = 140
 window-height = 36
+
+command = /opt/homebrew/bin/nu

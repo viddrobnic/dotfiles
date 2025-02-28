@@ -2,13 +2,14 @@
 
 My custom dotfiles setup. I use the following tools:
 
-- `ghostty` terminal emulator
+- `ghostty` - terminal emulator
 - `zsh`
-- `starhip` terminal prompt
-- `zellij` terminal workspace
-- `atuin` magical shell history
-- `zed` editor
-- `neovim` editor. Neovim config is located in a [separate repository](https://github.com/viddrobnic/init.lua).
+- `nushell` - maybe replacing zsh (testing phase)
+- `starhip` - terminal prompt
+- `zellij` - terminal workspace
+- `atuin` - magical shell history
+- `zed` - editor
+- `neovim` - editor. Neovim config is located in a [separate repository](https://github.com/viddrobnic/init.lua).
 
 ## Getting started
 
@@ -49,3 +50,8 @@ My custom dotfiles setup. I use the following tools:
 - Some TUIs (like `kitten themes`) might misbehave. Try running them in zellij's locked mode (<kbd>Ctrl</kbd> + <kbd>g</kbd>).
   If it still doesn't work, run the command outside of zellij.
 - If you have neovim open and resize the terminal window, stuff might get rendered weird. For now the fix is to restart neovim...
+
+## Testing Nushell
+
+I am currently testing out nushell. Config is available in `nushell/config.nu`, but there are no instructions yet on how to
+get it set up.
