@@ -1,0 +1,13 @@
+[user]
+name = "Vid Drobnič"
+email = "me@viddrobnic.com"
+
+[ui]
+default-command = "log"
+editor = "nvim"
+diff-editor = ":builtin"
+
+[signing]
+behavior = "own"
+backend = "ssh"
+key = "/Users/vidd/.ssh/id_ed25519.pub"
