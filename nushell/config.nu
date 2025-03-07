@@ -3,10 +3,20 @@
 # Installed by:
 # version = "0.102.0"
 
-# disable banner
+# Disable banner
 $env.config.show_banner = false
 
-$env.path ++= ["/opt/homebrew/bin", $"($env.home)/.cargo/bin", $"($env.home)/go/bin", $"($env.home)/.zig"]
+# Set theme
+source $"($nu.data-dir)/themes/catppuccin_frappe.nu"
+
+# Setup path
+$env.path ++= [
+  "/opt/homebrew/bin",
+  $"($env.home)/.cargo/bin",
+  $"($env.home)/go/bin",
+  $"($env.home)/.zig",
+  "/usr/local/go/bin",
+]
 
 # Setup editor mode
 $env.config.edit_mode = "vi"
@@ -16,12 +26,15 @@ $env.config.buffer_editor = "nvim"
 alias vim = nvim
 alias lg = lazygit
 
-# Set theme
-source $"($nu.data-dir)/themes/catppuccin_frappe.nu"
+# Autocomplete settings
+const completions_dir = $"($nu.data-dir)/completions"
+mkdir $completions_dir
 
-# jj autocomplete
-jj util completion nushell | save -f $"($nu.data-dir)/completions-jj.nu" 
-source $"($nu.data-dir)/completions-jj.nu"
+jj util completion nushell | save -f $"($completions_dir)/completions-jj.nu" 
+
+source $"($completions_dir)/completions-jj.nu"
+source $"($completions_dir)/git-completions.nu"
+source $"($completions_dir)/npm-completions.nu"
 
 # Setup starship
 $env.PROMPT_INDICATOR_VI_INSERT = ""
