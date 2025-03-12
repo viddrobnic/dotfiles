@@ -27,6 +27,7 @@ alias vim = nvim
 alias lg = lazygit
 
 # Autocomplete settings
+$env.config.completions.algorithm = "fuzzy"
 const completions_dir = $"($nu.data-dir)/completions"
 mkdir $completions_dir
 
@@ -35,6 +36,7 @@ jj util completion nushell | save -f $"($completions_dir)/completions-jj.nu"
 source $"($completions_dir)/completions-jj.nu"
 source $"($completions_dir)/git-completions.nu"
 source $"($completions_dir)/npm-completions.nu"
+source $"($completions_dir)/docker-completions.nu"
 
 # Setup starship
 $env.PROMPT_INDICATOR_VI_INSERT = ""
