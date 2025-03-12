@@ -1,7 +1,7 @@
 format = """
 [┌──](bold green)$username[@](bold blue dimmed)$hostname \
 $directory\
-$git_branch$git_commit$git_state$git_status\
+${custom.jj}${custom.git_branch}\
 $python\
 $golang\
 $rust\
@@ -32,31 +32,6 @@ truncate_to_repo = true
 home_symbol = '~'
 style = 'bold white'
 
-[git_branch]
-format = '[$symbol$branch(:$remote_branch)]($style) '
-style = 'bold blue'
-
-[git_commit]
-tag_disabled = false
-commit_hash_length = 6
-tag_symbol = ' 🏷 '
-format = '[\($hash$tag\)]($style) '
-style = 'bold blue'
-
-[git_status]
-format = '[($all_status$ahead_behind)]($style)'
-style = 'blue bold'
-ahead = '⇡\($count\) '
-diverged = '⇕⇡\($ahead_count\)⇣\($behind_count\) '
-behind = '⇣\($count\) '
-conflicted = '🏳 '
-untracked = '🤷 '
-stashed = '📦 '
-modified = '📝 '
-renamed = '📑 '
-deleted = '🗑️ '
-staged = '🏗️ \($count\) '
-
 [python]
 format = '[\($symbol$version( $virtualenv)\) ]($style)'
 style = 'cyan bold'
@@ -78,3 +53,43 @@ symbol = ''
 min_time = 0
 format = '[\[$duration\]]($style)'
 style = 'bold blue'
+
+
+[git_branch]
+format = '[$symbol$branch(:$remote_branch)]($style) '
+style = 'bold blue'
+
+[custom.git_branch]
+when = "jj root | complete | if $in.exit_code == 0 { exit 1 } else { exit 0 }"
+command = "starship module git_branch"
+description = "Only swho git_branch when we're not in a jj repo"
+
+[custom.jj]
+ignore_timeout = true
+description = "Current jj status"
+symbol = ""
+when = true
+command = '''
+jj root | ignore; jj log --revisions @ --no-graph --ignore-working-copy --color always --limit 1 --template '
+  separate(" ",
+    "🥋",
+    change_id.shortest(4),
+    bookmarks,
+    "|",
+    concat(
+      if(conflict, "💥"),
+      if(divergent, "🚧"),
+      if(hidden, "👻"),
+      if(immutable, "🔒"),
+    ),
+    raw_escape_sequence("\x1b[1;32m") ++ if(empty, "(empty)"),
+    raw_escape_sequence("\x1b[1;32m") ++ if(description.first_line().len() == 0,
+      "(no description set)",
+      if(description.first_line().substr(0, 29) == description.first_line(),
+        description.first_line(),
+        description.first_line().substr(0, 29) ++ "…",
+      )
+    ) ++ raw_escape_sequence("\x1b[0m"),
+  )
+'
+'''
