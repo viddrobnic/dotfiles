@@ -18,7 +18,7 @@ My custom dotfiles setup. I use the following tools:
 1. Clone this repository to a location of your liking. Personally I use `~/.dotfiles`.
 2. Install nushell dependencies
 
-   ```nu
+   ```nushell
    let completions_dir = $"($nu.data-dir)/completions"
    mkdir $completions_dir
 
@@ -32,7 +32,7 @@ My custom dotfiles setup. I use the following tools:
 3. Link the files to correct places. If you cloned the repository to `~/.dotfiles` you can use the following
    script, otherwise execute the linking manually.
 
-   ```nu
+   ```nushell
    mkdir  ~/.config/ghostty
    ln -s ~/.dotfiles/ghostty/config ~/.config/ghostty/config
 
