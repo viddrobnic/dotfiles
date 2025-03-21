@@ -1,5 +1,5 @@
 format = """
-[┌──](bold green)$username[@](bold blue dimmed)$hostname \
+[┌──](bold green)$username[@](bold yellow dimmed)$hostname \
 $directory\
 ${custom.jj}${custom.git_branch}\
 $python\
@@ -19,12 +19,12 @@ error_symbol = '[❯](bold red)'
 
 [username]
 show_always = true
-style_user = 'bold blue'
+style_user = 'bold yellow'
 format = '[$user]($style)'
 
 [hostname]
 ssh_only = false
-style = 'bold purple'
+style = 'bold cyan'
 format = '[$hostname]($style)'
 
 [directory]

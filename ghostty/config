@@ -1,4 +1,4 @@
-theme = catppuccin-frappe
+theme = GruvboxDark
 font-family = JetBrainsMono Nerd Font
 cursor-style = underline
 macos-option-as-alt = true

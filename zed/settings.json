@@ -7,12 +7,14 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "theme": "Gruvbox Dark",
   "assistant": {
     "default_model": {
       "provider": "zed.dev",
       "model": "claude-3-7-sonnet-latest"
     },
-    "version": "2"
+    "version": "2",
+    "dock": "left"
   },
   "features": {
     "edit_prediction_provider": "zed"
@@ -23,7 +25,7 @@
   },
   "vim_mode": true,
   "ui_font_size": 16,
-  "buffer_font_size": 15,
+  "buffer_font_size": 14,
   "relative_line_numbers": true,
   "inlay_hints": {
     "enabled": true
@@ -47,7 +49,8 @@
   "terminal": {
     "shell": {
       "program": "nu"
-    }
+    },
+    "dock": "right"
   },
   "lsp": {
     "vtsls": {

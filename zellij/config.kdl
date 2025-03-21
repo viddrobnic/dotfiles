@@ -1,6 +1,19 @@
+default_shell "nu"
+default_layout "layout"
+
 on_force_close "quit"
 session_serialization false
-default_shell "nu"
+
+show_startup_tips false
+
+theme "gruvbox-dark"
+
+ui {
+    pane_frames {
+        rounded_corners true
+        hide_session_name true
+    }
+}
 
 keybinds {
     unbind "Ctrl o"
@@ -22,14 +35,3 @@ keybinds {
         bind "Ctrl a" { SwitchToMode "normal"; }
     }
 }
-
-ui {
-    pane_frames {
-        rounded_corners true
-        hide_session_name true
-    }
-}
-
-theme "catppuccin-frappe"
-
-default_layout "layout"

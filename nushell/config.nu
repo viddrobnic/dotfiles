@@ -47,17 +47,19 @@ starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.n
 
 # Setup starship
 def start_zellij [] {
-    if 'ZELLIJ' not-in ($env | columns) {
-      if 'ZELLIJ_AUTO_ATTACH' in ($env | columns) and $env.ZELLIJ_AUTO_ATTACH == 'true' {
-        zellij attach -c
-      } else {
-        zellij
-      }
+  let env_cols = $env | columns
 
-      if 'ZELLIJ_AUTO_EXIT' in ($env | columns) and $env.ZELLIJ_AUTO_EXIT == 'true' {
-        exit
-      }
+  if 'ZELLIJ' not-in $env_cols and 'ZED_TERM' not-in $env_cols  {
+    if 'ZELLIJ_AUTO_ATTACH' in ($env | columns) and $env.ZELLIJ_AUTO_ATTACH == 'true' {
+      zellij attach -c
+    } else {
+      zellij
     }
+
+    if 'ZELLIJ_AUTO_EXIT' in ($env | columns) and $env.ZELLIJ_AUTO_EXIT == 'true' {
+      exit
+    }
+  }
 }
 
 start_zellij
