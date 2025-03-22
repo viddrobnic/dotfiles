@@ -6,9 +6,6 @@
 # Disable banner
 $env.config.show_banner = false
 
-# Set theme
-source $"($nu.data-dir)/themes/catppuccin_frappe.nu"
-
 # Setup path
 $env.path ++= [
   "/opt/homebrew/bin",
