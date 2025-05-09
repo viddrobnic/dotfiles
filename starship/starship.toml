@@ -1,16 +1,8 @@
 format = """
-[┌──](bold green)$username[@](bold yellow dimmed)$hostname \
-$directory\
-${custom.jj}${custom.git_branch}\
-$python\
-$golang\
-$rust\
-$nodejs
-[└─](bold green)$character
+$username[@](bold yellow dimmed)$hostname $directory$character
 """
 
 right_format = """$cmd_duration"""
-
 add_newline = true
 
 [character]
