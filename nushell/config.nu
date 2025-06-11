@@ -19,6 +19,8 @@ $env.path ++= [
 $env.config.edit_mode = "vi"
 $env.config.buffer_editor = "nvim"
 
+$env.EDITOR = "nvim"
+
 # Common aliases
 alias vim = nvim
 alias lg = lazygit
