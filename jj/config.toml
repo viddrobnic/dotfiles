@@ -21,6 +21,9 @@ tug = ["bookmark", "move", "--from", "closest_bookmark(@-)", "--to", "@-"]
 # Rebase the current branch onto the trunk.
 retrunk = ["rebase", "-d", "trunk()"]
 
+pull = ["git", "fetch"]
+push = ["git", "push"]
+
 [revset-aliases]
 "closest_bookmark(to)" = "heads(::to & bookmarks())"
 
