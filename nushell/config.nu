@@ -60,3 +60,7 @@ def start_zellij [] {
 }
 
 start_zellij
+
+# Setup zoxide
+zoxide init --cmd cd nushell | save -f ~/.zoxide.nu
+source ~/.zoxide.nu

@@ -7,6 +7,7 @@ My custom dotfiles setup. I use the following tools:
 - [`starhip`](https://starship.rs/) - terminal prompt
 - [`zellij`](https://zellij.dev/) - terminal workspace
 - [`jujutsu`](https://jj-vcs.github.io/jj/latest/) - version control system
+- [`zoxide`](https://github.com/ajeetdsouza/zoxide) - smarter `cd` command
 - [`neovim`](https://neovim.io/) - editor. Neovim config is located in a [separate repository](https://github.com/viddrobnic/init.lua).
 - [`zed`](https://zed.dev/) - backup editor
 
@@ -16,7 +17,7 @@ My custom dotfiles setup. I use the following tools:
 > The commands are in nushell and are not POSIX compliant
 
 1. Clone this repository to a location of your liking. Personally I use `~/.dotfiles`.
-2. Install nushell dependencies
+2. Bootstrap nushell
 
    ```nushell
    let completions_dir = $"($nu.data-dir)/completions"
@@ -26,6 +27,8 @@ My custom dotfiles setup. I use the following tools:
 
    http get "https://raw.githubusercontent.com/nushell/nu_scripts/refs/heads/main/custom-completions/npm/npm-completions.nu" | save -f $"($completions_dir)/npm-completions.nu"
    http get "https://raw.githubusercontent.com/nushell/nu_scripts/refs/heads/main/custom-completions/docker/docker-completions.nu" | save -f $"($completions_dir)/docker-completions.nu"
+
+   zoxide init --cmd cd nushell | save -f ~/.zoxide.nu
    ```
 
 3. Link the files to correct places. If you cloned the repository to `~/.dotfiles` you can use the following
