@@ -23,7 +23,6 @@ $env.EDITOR = "nvim"
 
 # Common aliases
 alias vim = nvim
-alias lg = lazygit
 
 # Autocomplete settings
 $env.config.completions.algorithm = "fuzzy"
@@ -33,7 +32,6 @@ mkdir $completions_dir
 jj util completion nushell | save -f $"($completions_dir)/completions-jj.nu" 
 
 source $"($completions_dir)/completions-jj.nu"
-source $"($completions_dir)/git-completions.nu"
 source $"($completions_dir)/npm-completions.nu"
 source $"($completions_dir)/docker-completions.nu"
 
@@ -44,7 +42,7 @@ $env.PROMPT_INDICATOR_VI_NORMAL = ": "
 mkdir ($nu.data-dir | path join "vendor/autoload")
 starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
 
-# Setup starship
+# Setup zellij
 def start_zellij [] {
   let env_cols = $env | columns
 

@@ -7,6 +7,7 @@ session_serialization false
 show_startup_tips false
 stacked_resize false
 
+pane_frames false
 theme "gruvbox-dark"
 
 ui {

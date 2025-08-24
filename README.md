@@ -24,7 +24,6 @@ My custom dotfiles setup. I use the following tools:
 
    jj util completion nushell | save -f $"($completions_dir)/completions-jj.nu"
 
-   http get "https://raw.githubusercontent.com/nushell/nu_scripts/refs/heads/main/custom-completions/git/git-completions.nu" | save -f $"($completions_dir)/git-completions.nu"
    http get "https://raw.githubusercontent.com/nushell/nu_scripts/refs/heads/main/custom-completions/npm/npm-completions.nu" | save -f $"($completions_dir)/npm-completions.nu"
    http get "https://raw.githubusercontent.com/nushell/nu_scripts/refs/heads/main/custom-completions/docker/docker-completions.nu" | save -f $"($completions_dir)/docker-completions.nu"
    ```
