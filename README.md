@@ -49,3 +49,14 @@ My custom dotfiles setup. I use the following tools:
    ln -s ~/.dotfiles/git/.gitconfig ~/.gitconfig
    ln -s ~/.dotfiles/jj/config.toml (jj config path --user)
    ```
+
+## More Tools
+
+Here are some more tools that I use, but don't need any configuration:
+
+> [!NOTE]
+> On my TODO there is a "learn nix" item. It should make all of this mess nicer.
+
+- [`ouch`](https://github.com/ouch-org/ouch) - painless(de)compression
+- [`tokei`](https://github.com/XAMPPRocky/tokei) - count lines of code
+- [`btop`](https://github.com/aristocratos/btop) - resource monitor
