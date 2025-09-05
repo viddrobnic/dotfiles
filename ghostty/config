@@ -1,9 +1,12 @@
 theme = GruvboxDark
 font-family = JetBrainsMono Nerd Font
-cursor-style = underline
+cursor-style = block
+shell-integration-features = no-cursor
+confirm-close-surface = false
 macos-option-as-alt = true
 macos-icon = xray
 window-width = 140
 window-height = 36
 
-command = /opt/homebrew/bin/nu
+command = tmux new-session
+

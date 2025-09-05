@@ -1,0 +1,78 @@
+export PATH=/opt/homebrew/bin:$HOME/.cargo/bin:$HOME/go/bin:$HOME/.zig:$PATH
+
+source ~/.zsh/completion.zsh
+
+###########
+# HISTORY #
+###########
+HISTFILE=$HOME/.zsh_history
+HISTSIZE=50000
+SAVEHIST=50000
+
+# Immediately append to history file:
+setopt INC_APPEND_HISTORY
+
+# Record timestamp in history:
+setopt EXTENDED_HISTORY
+
+# Expire duplicate entries first when trimming history:
+setopt HIST_EXPIRE_DUPS_FIRST
+
+# Don't record an entry that was just recorded again:
+setopt HIST_IGNORE_DUPS
+
+# Delete old recorded entry if new entry is a duplicate:
+setopt HIST_IGNORE_ALL_DUPS
+
+# Do not display a line previously found:
+setopt HIST_FIND_NO_DUPS
+
+# Don't write duplicate entries in the history file:
+setopt HIST_SAVE_NO_DUPS
+
+# Share history between all sessions:
+setopt SHARE_HISTORY
+
+# Execute commands using history (e.g.: using !$) immediatel:
+unsetopt HIST_VERIFY
+
+
+#####################
+# CONFIGURE EDITORS #
+#####################
+export EDITOR="nvim"
+export VISUAL="nvim"
+set -o vi
+
+###########
+# ALIASES #
+###########
+alias ls='eza -lh --group-directories-first --icons'
+alias lsa='ls -a'
+alias lt='ls --tree --level=2 --git'
+alias lta='lt -a'
+alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
+
+alias vim="nvim"
+
+###############
+# SETUP TOOLS #
+###############
+
+# Theme for batcat
+export BAT_THEME="gruvbox-dark"
+
+# Init starship
+eval "$(starship init zsh)"
+
+# Init jujutsu
+source <(COMPLETE=zsh jj)
+
+# Zoxide
+eval "$(zoxide init zsh --cmd cd)"
+
+##############
+# EXTENSIONS #
+##############
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

@@ -5,7 +5,7 @@ email = "me@viddrobnic.com"
 [signing]
 behavior = "own"
 backend = "ssh"
-key = "/Users/vidd/.ssh/id_ed25519.pub"
+key = "/home/vidd/.ssh/id_ed25519.pub"
 
 [ui]
 default-command = "log"
