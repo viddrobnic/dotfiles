@@ -8,5 +8,11 @@ macos-icon = xray
 window-width = 140
 window-height = 36
 
+keybind = alt+1=unbind
+keybind = alt+2=unbind
+keybind = alt+3=unbind
+keybind = alt+4=unbind
+keybind = alt+5=unbind
+
 command = tmux new-session
 
