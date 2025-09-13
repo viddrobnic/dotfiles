@@ -8,7 +8,7 @@ neovim, which is located in a [separate repository](https://github.com/viddrobni
 1. Install the dependencies with whatever package manager you like:
 
 ```
-ghostty starship jujutsu zoxide neovim ripgrep fzf bat eza ouch tokei btop
+ghostty starship jujutsu zoxide neovim yazi ripgrep fzf bat eza ouch tokei btop
 ```
 
 2. Clone this repository to a location of your liking. Personally I use `~/.dotfiles`.
@@ -35,4 +35,8 @@ ghostty starship jujutsu zoxide neovim ripgrep fzf bat eza ouch tokei btop
 
    ln -s ~/.dotfiles/git/.gitconfig ~/.gitconfig
    ln -s ~/.dotfiles/jj/config.toml $(jj config path --user)
+
+   mkdir -p ~/.config/yazi
+   ya pkg add bennyyip/gruvbox-dark
+   ln -s ~/.dotfiles/yazi/theme.toml ~/.config/yazi/theme.toml
    ```
