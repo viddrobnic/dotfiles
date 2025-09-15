@@ -6,7 +6,6 @@ bindkey -M menuselect 'h' vi-backward-char 'k' vi-up-line-or-history 'j' vi-down
 
 # Initialize completion system
 autoload -U compinit; compinit
-_comp_options+=(globdots) # With hidden files
 
 # Options
 setopt GLOB_COMPLETE        # Show autocompletion menu with globs
