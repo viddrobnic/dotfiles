@@ -65,6 +65,7 @@ export VISUAL="nvim"
 ###########
 
 # Another macos hack... alias can't use correct autocomplete
+unalias ls 2>/dev/null
 if [[ $(uname) == "Darwin" ]]; then
   ls() {
     eza -lh --group-directories-first --icons "$@"
