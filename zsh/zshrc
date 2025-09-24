@@ -7,6 +7,9 @@ if [[ $(uname) == "Darwin" ]]; then
   eval "$(gdircolors -b)"
 fi
 
+# bun completions
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
+
 source ~/.zsh/completion.zsh
 
 ################
@@ -105,9 +108,15 @@ function y() {
 	rm -f -- "$tmp"
 }
 
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
 ##############
 # EXTENSIONS #
 ##############
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 
