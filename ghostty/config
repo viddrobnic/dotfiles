@@ -3,19 +3,43 @@ font-family = JetBrainsMono Nerd Font
 cursor-style = block
 shell-integration-features = no-cursor
 confirm-close-surface = false
+resize-overlay = never
 macos-option-as-alt = true
-macos-icon = xray
 window-width = 140
 window-height = 36
 
-keybind = alt+1=unbind
-keybind = alt+2=unbind
-keybind = alt+3=unbind
-keybind = alt+4=unbind
-keybind = alt+5=unbind
+# Tab bar configuration
+window-show-tab-bar = always
+gtk-titlebar-style = native
+macos-titlebar-style = tabs
 
-keybind = alt+left=unbind
-keybind = alt+right=unbind
+# Tab management keybindings
+keybind = alt+t=new_tab
+keybind = alt+one=goto_tab:1
+keybind = alt+two=goto_tab:2
+keybind = alt+three=goto_tab:3
+keybind = alt+four=goto_tab:4
+keybind = alt+five=goto_tab:5
+keybind = alt+six=goto_tab:6
+keybind = alt+seven=goto_tab:7
+keybind = alt+eight=goto_tab:8
+keybind = alt+nine=goto_tab:9
 
-command = tmux new-session
+# Split management keybindings
+keybind = ctrl+s>s=new_split:down
+keybind = ctrl+s>v=new_split:right
+keybind = alt+h=goto_split:left
+keybind = alt+j=goto_split:down
+keybind = alt+k=goto_split:up
+keybind = alt+l=goto_split:right
+
+# Split resizing keybindings
+keybind = alt+left=resize_split:left,50
+keybind = alt+right=resize_split:right,50
+keybind = alt+up=resize_split:up,50
+keybind = alt+down=resize_split:down,50
+
+# Scrolling keybindings (vim-style)
+keybind = alt+u=scroll_page_up
+keybind = alt+d=scroll_page_down
 
