@@ -11,6 +11,7 @@ key = "~/.ssh/id_ed25519.pub"
 default-command = "log"
 editor = "nvim"
 diff-editor = ":builtin"
+diff-formatter = ["difft", "--color=always", "$left", "$right"]
 
 [aliases]
 # Move the closest bookmark to the current commit. This is useful when
