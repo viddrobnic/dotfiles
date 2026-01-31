@@ -26,8 +26,8 @@ bindkey '^[[B' history-search-forward
 # HISTORY #
 ###########
 HISTFILE=$HOME/.zsh_history
-HISTSIZE=50000
-SAVEHIST=50000
+HISTSIZE=500000
+SAVEHIST=500000
 
 # Immediately append to history file:
 setopt INC_APPEND_HISTORY
@@ -35,26 +35,8 @@ setopt INC_APPEND_HISTORY
 # Record timestamp in history:
 setopt EXTENDED_HISTORY
 
-# Expire duplicate entries first when trimming history:
-setopt HIST_EXPIRE_DUPS_FIRST
-
-# Don't record an entry that was just recorded again:
-setopt HIST_IGNORE_DUPS
-
-# Delete old recorded entry if new entry is a duplicate:
-setopt HIST_IGNORE_ALL_DUPS
-
-# Do not display a line previously found:
-setopt HIST_FIND_NO_DUPS
-
-# Don't write duplicate entries in the history file:
-setopt HIST_SAVE_NO_DUPS
-
-# Share history between all sessions:
-setopt SHARE_HISTORY
-
-# Execute commands using history (e.g.: using !$) immediatel:
-unsetopt HIST_VERIFY
+# Safer multi-shell history writes:
+setopt HIST_FCNTL_LOCK
 
 
 #####################
@@ -93,6 +75,9 @@ export BAT_THEME="gruvbox-dark"
 # Init starship
 eval "$(starship init zsh)"
 
+# Init atuin
+eval "$(atuin init zsh)"
+
 # Init jujutsu
 source <(COMPLETE=zsh jj)
 
@@ -118,5 +103,3 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 ##############
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-
