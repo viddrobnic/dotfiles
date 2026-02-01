@@ -5,3 +5,4 @@ show_help = false
 show_preview = false
 show_tabs = false
 keymap_mode = "auto"
+enter_accept = true
