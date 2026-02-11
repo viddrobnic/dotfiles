@@ -71,7 +71,9 @@ alias vim="nvim"
 ###############
 
 # Theme for batcat
-export BAT_THEME="gruvbox-dark"
+export BAT_THEME="auto"
+export BAT_THEME_DARK="gruvbox-dark"
+export BAT_THEME_LIGHT="gruvbox-light"
 
 # Init starship
 eval "$(starship init zsh)"

@@ -31,8 +31,6 @@ ghostty starship jujutsu zoxide neovim yazi ripgrep fzf bat eza ouch tokei btop
 
    ln -s ~/.dotfiles/starship/starship.toml ~/.config/starship.toml
 
-   ln -s ~/.dotfiles/tmux/tmux.conf ~/.tmux.conf
-
    ln -s ~/.dotfiles/git/.gitconfig ~/.gitconfig
    ln -s ~/.dotfiles/jj/config.toml $(jj config path --user)
 

@@ -1,4 +1,4 @@
-theme = Gruvbox Dark
+theme = light:Gruvbox Light Hard,dark:Gruvbox Dark
 font-family = JetBrainsMono Nerd Font
 cursor-style = block
 shell-integration-features = no-cursor
