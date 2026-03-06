@@ -1,5 +1,8 @@
 # Dotfiles
 
+> [!WARNING]  
+> This repository is archived and superseeded by [nixy](https://github.com/viddrobnic/nixy).
+
 My dotfiles setup. This repository doesn't include configuration for
 neovim, which is located in a [separate repository](https://github.com/viddrobnic/init.lua).
 
